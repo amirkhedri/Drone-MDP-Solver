@@ -62,3 +62,32 @@ def compute_policy(api):
     _save_data_for_visualizer(V, policy, [...], params, api, states, params['rows'], params['cols'])
     
     return policy
+def _save_data_for_visualizer(V, policy, convergence_history, params, api, states, rows, cols):
+    is_terminal = {s: api.is_terminal(s) for s in states}
+    try:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        
+        # ذخیره همگرایی برای نمودار ۲
+        conv_path = os.path.join(base_dir, "convergence_data.json")
+        with open(conv_path, "w") as f:
+            json.dump(convergence_history, f)
+
+        # ذخیره ارزش‌ها و سیاست برای نمودارهای ۱ و ۳
+        grid_info = []
+        for s in states:
+            r, c, d = s
+            grid_info.append({
+                "r": r, "c": c, "d": d,
+                "cell": api.get_cell_type(s),
+                "V": V.get(s, 0.0),
+                "action": policy.get(s, None),
+                "terminal": is_terminal[s],
+            })
+
+        val_path = os.path.join(base_dir, "value_data.json")
+        with open(val_path, "w") as f:
+            json.dump({"rows": rows, "cols": cols, "max_damage": 4, "params": params, "states": grid_info}, f)
+        
+        print(f"[policy.py] Data saved to convergence_data.json and value_data.json")
+    except Exception as e:
+        print(f"[policy.py] Warning: could not save data: {e}")
