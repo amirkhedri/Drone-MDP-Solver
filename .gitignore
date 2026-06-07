@@ -2,3 +2,4 @@ __pycache__/
 *.json
 .vscode/
 .ipynb_checkpoints/
+*.png
