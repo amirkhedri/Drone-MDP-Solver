@@ -24,7 +24,6 @@ def compute_policy(api):
                 V_new[s] = 0.0
                 continue
             
-            # محاسبه ارزش جدید با استفاده از عمل‌های ممکن
             best_q = -float('inf')
             for a in api.get_possible_actions(s):
                 q = sum(prob * (api.get_reward(s, a, ns) + gamma * V.get(ns, 0.0)) 
@@ -39,3 +38,27 @@ def compute_policy(api):
         if delta < THETA:
             print(f"[policy.py] Converged in {i+1} iterations.")
             break
+    policy = {}
+    print("[policy.py] Extracting policy...")
+    
+    for s in states:
+        if api.is_terminal(s):
+            continue
+            
+        best_a = None
+        best_q = -float('inf')
+        
+        for a in api.get_possible_actions(s):
+            q = sum(prob * (api.get_reward(s, a, ns) + gamma * V.get(ns, 0.0)) 
+                    for ns, prob in trans_cache[(s, a)])
+            
+            if q > best_q:
+                best_q = q
+                best_a = a
+        
+        if best_a:
+            policy[s] = best_a
+
+    _save_data_for_visualizer(V, policy, [...], params, api, states, params['rows'], params['cols'])
+    
+    return policy
