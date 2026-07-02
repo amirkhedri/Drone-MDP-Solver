@@ -1,8 +1,4 @@
-Here is a clean, professional, and visually appealing Markdown template for your Drone MDP repository. It uses the same high-quality layout as your Sokoban README, complete with badges, tables, and clear section hierarchies.
 
-Copy the code block below and paste it directly into your `README.md` file:
-
-```markdown
 <h1 align="center">🛸 Drone MDP Solver</h1>
 
 <p align="center">
