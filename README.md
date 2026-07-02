@@ -1,18 +1,17 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/f5L5wp83)
+
 
 # Drone MDP Challenge
 
 ## Overview
 
-In this project, you will model a drone navigation problem as a **Markov Decision Process (MDP)** and compute an optimal policy using the **Value Iteration** algorithm.
+In this project, we will model a drone navigation problem as a **Markov Decision Process (MDP)** and compute an optimal policy using the **Value Iteration** algorithm.
 
-The drone operates in a stochastic grid-world environment containing hazards, portals, repair stations, and a goal state. Your objective is to maximize the expected cumulative reward while safely reaching the target.
+The drone operates in a stochastic grid-world environment containing hazards, portals, repair stations, and a goal state. Our objective is to maximize the expected cumulative reward while safely reaching the target.
 
 ---
 
 ## Learning Objectives
 
-By completing this project, you will:
 
 - Model a real-world problem as an MDP
 - Implement the Value Iteration algorithm
@@ -120,18 +119,6 @@ Visualize the final policy using directional arrows.
 
 ---
 
-## Evaluation
-
-Your policy will be evaluated over **5 independent episodes**.
-
-| Criterion | Weight |
-|------------|----------|
-| Goal Reach Rate | 40% |
-| Total Reward | 30% |
-| Crash Avoidance | 15% |
-| Policy Coverage | 15% |
-
-Additional credit may be awarded for accurately modeling and utilizing all environment features.
 
 ---
 
@@ -149,25 +136,17 @@ Run the server:
 python server.py
 ```
 
-Then:
 
-1. Implement the policy function
-2. Launch the provided interface
-3. Observe the execution of five evaluation episodes
 
 ---
 
-## Deliverables
 
-### Required Files
 
-- `policy.py`
-- Visualization script
-- Technical report (PDF)
+
 
 ### Technical Report
 
-Your report should include:
+Report Includes:
 
 - MDP formulation
 - Value Iteration implementation details
@@ -183,7 +162,4 @@ Your report should include:
 
 **Course:** Fundamentals and Applications of Artificial Intelligence  
 **Project:** Drone MDP Challenge  
-**Instructor:** Dr. Marzieh Hosseini  
-**Teaching Assistants:** Masih Roughani, Marzieh Karami, Fatemeh Sayadzade  
-**Department:** Faculty of Computer Engineering, University of Isfahan  
-**Semester:** Spring 2026
+
