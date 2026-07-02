@@ -75,7 +75,7 @@ Actions are **stochastic**. The drone may deviate from the intended direction ac
 
 Implement the policy computation function using **Value Iteration**.
 
-Your implementation should:
+Imeplementation must include:
 
 1. Read environment parameters
 2. Retrieve all states
