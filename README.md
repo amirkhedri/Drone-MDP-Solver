@@ -63,11 +63,10 @@ The solver generates comprehensive visual analytics to evaluate the policy's mat
 
 ### Quick Start
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/amirkhedri/Drone-MDP-Solver.git](https://github.com/amirkhedri/Drone-MDP-Solver.git)
-   cd Drone-MDP-Solver
+   
+   git clone https://github.com/amirkhedri/Drone-MDP-Solver.git
+   
 
-```
 
 2. **Install dependencies:**
 ```bash
@@ -91,8 +90,5 @@ python server.py
 This project was developed for the **Fundamentals and Applications of Artificial Intelligence** course.
 
 * **Project:** Drone MDP Challenge
-* **Author:** Amirmohammad Khedri
 
-```
 
-```
